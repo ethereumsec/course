@@ -1,0 +1,12 @@
+- Welcome
+    - Who this course is for (put that 1st tweet here)
+- Blockchain, smart contracts, and DApps
+    - What is blockchain?
+    - When should you use a blockchain?
+    - What are smart contracts?
+    - What are DApps?
+- Attack surface introduction (put that 1st tweet here again)
+- Ethereum 101 (introduce Ethereum as our main example vehicle)
+- Developing for Ethereum
+- Hacking Ethereum
+- Writing reports
