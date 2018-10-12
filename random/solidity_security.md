@@ -19,6 +19,22 @@ TODO
 
 TODO
 
+---
+
+## Standards
+
+- [Decentralized Application Security Project (DASP)](https://www.dasp.co/)
+    - Top 10, currently has 2018 list out
+    - Initiative of NCC Group
+- [Smart contract weakness classifications](https://smartcontractsecurity.github.io/SWC-registry/)
+    - Maintained by the Mythril team (Consensys)
+
+**Other high-profile resources, wouldn't exactly call them "standards" though**
+
+- [Solidity documentation's own security considerations](https://solidity.readthedocs.io/en/latest/security-considerations.html)
+
+---
+
 ## Risks
 
 ### Re-entrancy
@@ -37,11 +53,20 @@ TODO
 
 These are situations where vulnerability may arise from a developer not understanding a programming quirk.
 
-#### Private information and randomness
+#### "Private" information and default visibility
 
 From Solidity docs security considerations:
 
 > Everything you use in a smart contract is publicly visible, even local variables and state variables marked `private`. [1]
+
+Thus pseudo-randomness via a normal contract will be predictable because you can't hide the seed, really.
+
+A best practice, still, is always specifying the visibility of all functions in a contract.
+
+If you don't specify the visibility of something...
+
+1. It will default to public
+2. `solc` (Solidity compiler) will throw warnings there's no explicit visibility set
 
 <small><i>Appears in: Solidity doc security considerations</i></small>
 
@@ -121,6 +146,14 @@ Underflow example - the following is true.
 uint8(0) - uint8(1) == 255
 ```
 
+Best mitigation is using (*calling*) mathematical libraries which replace the standard math operators (addition, subtraction, multiplication).
+
+i.e. OpenZeppelin SafeMath
+
+Second best, do things how they're done there. These will all cost more gas but it's in the interest of security.
+
+Otherwise - just be very careful.
+
 <small><i>Appears in: Solidity doc security considerations</i></small>
 
 #### Two's complement
@@ -137,6 +170,8 @@ This is kind of an obscure subclass of integer overflow and underflow issues.
 
 > If the results require that another bit than is available in the datatype be allocated, the leftmost digit is simply truncated. [2]
 
+Mitigation advice is same as typical integer overflow/underflow.
+
 <small><i>Appears in: Solidity doc security considerations</i></small>
 
 ### Compiler bugs
@@ -144,6 +179,8 @@ This is kind of an obscure subclass of integer overflow and underflow issues.
 The Solidity documentation maintains a list of known security-relevant bugs that have appeared in the compiler. Includes dates of when a given bug was introduced then when it was fixed.
 
 [https://solidity.readthedocs.io/en/latest/bugs.html](https://solidity.readthedocs.io/en/latest/bugs.html)
+
+---
 
 ## Recommendations
 
@@ -173,6 +210,8 @@ Assuming the Solidity version is still <0.5.0 when you read this.
 
 > If the self-check fails, the contract automatically switches into some kind of “failsafe” mode, which, for example, disables most of the features, hands over control to a fixed and trusted third party or just converts the contract into a simple “give me back my money” contract. [1]
 
+---
+
 ## Patterns
 
 ### Checks-Effects-Interactions
@@ -181,14 +220,77 @@ Assuming the Solidity version is still <0.5.0 when you read this.
 
 > As the second step, if all checks passed, effects to the state variables of the current contract should be made. Interaction with other contracts should be the very last step in any function. [1]
 
+---
+
+## Tools
+
+- Mythril OSS
+    - *Consensys origin*
+    - Does "concolic analysis, taint analysis and control flow checking"
+    - Really static analysis, symbolic analysis and control flow checking
+        - Can lint source code
+        - Can do on-chain analysis
+        - Visualizes via a backend LASER-Ethereum
+    - Manual inspection is required to verify whether a particular overflow causes an exploitable vulnerability
+- Mythril Platform
+    - *Consensys origin*
+    - All of Mythril OSS as SaaS
+    - More "enterprise-ready" (??)
+- Slither
+    - *Trail of Bits origin*
+    - SAST
+- Echidna
+    - *Trail of Bits origin*
+    - Fuzzer, generates potentially malicious inputs to send at your binary
+- Manticore
+    - *Trail of Bits origin*
+    - Dynamic binary analysis with EVM support
+- Oyente
+    - Believe that also looks at binary
+    - Would call it DAST
+- solidity-coverage
+    - Code coverage tool for Solidity testing
+- Remix
+    - For smaller development stuff, in the browser
+- Truffle
+    - For bigger development stuff, local
+
+---
+
 ## Footnotes
 
 [1] [Solidity documentation 0.4.25](https://solidity.readthedocs.io/en/v0.4.25/security-considerations.html)
 
 [2] [Texas Tech University cybersecurity](https://discl.cs.ttu.edu/cybersecurity/doku.php?id=vulnerability_case_study:integer_overflows_and_underflows)
 
+---
+
 ## Further reading
 
 https://github.com/sigp/solidity-security-blog - lots of vulnerability info with real-world examples from the biggest Ethereum hacks
 
 https://github.com/sigp/presentations - includes presentations on web3 and Solidity security
+
+---
+
+## (Dump)
+
+Visualization tools
+
+Linters
+
+Bug finding tools
+
+Verification tools
+
+- Preferred
+    - Manticore - symbolic execution tool for EVM
+- Other options
+    - KEVM - K semantics of the EVM
+
+Reversing tools
+
+
+https://hackernoon.com/your-private-solidity-variable-is-not-private-save-it-before-it-becomes-public-52a723f29f5e
+
+https://blog.positive.com/predicting-random-numbers-in-ethereum-smart-contracts-e5358c6b8620
