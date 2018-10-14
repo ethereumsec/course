@@ -1,3 +1,120 @@
+
+Ethereum smart contracts never go down, cannot be changed, and run as programmed. They directly control money. Security is critical.
+
+[TopCoder blockchain community](https://blockchain.topcoder.com/), sponsored by Consensys
+
+- A future of actual secrets on the Ethereum blockchain?
+    - Ethereum cryptographic primitivites
+    - Zero-knowledge proofs
+
+- Video: [A brief history of smart contract security](https://www.youtube.com/watch?v=8LAThtT7euA) by John Maurelian (Consensys Diligence)
+    - Overviews Ethereum briefly, in the context of security
+    - Mentions some of the biggest hacks up to that point (December 2017)
+
+- [Ethereum wiki "Safety" page](https://github.com/ethereum/wiki/wiki/Safety)
+
+Higher-level languages
+
+- [Solidity](https://github.com/ethereum/solidity)
+    - December 2013
+    - First higher level language to appear
+    - Seems to be most prevalent by far
+- LLL
+    - March 2014
+    - Lisp-like
+- Serpent
+    - April 2014
+    - Python-like
+    - Vitalik Buterin's only language creation
+    - Has a **very bad security rap** after negative audit results by Zeppelin Solutions
+        - "Serpent should not be considered safe to use unless many critical problems are fixed."
+    - Never ever use it
+- [Bamboo](https://github.com/pirapira/bamboo)
+    - July 2017
+- [Vyper](https://github.com/ethereum/vyper)
+    - June 2018
+    - Python-like
+    - Alleged to be focused on security, simplicity and auditability
+
+Secure reusable frameworks
+
+- [OpenZeppelin](https://openzeppelin.org/)
+- [Dappsys](https://dapp.tools/dappsys/)
+
+Development tools
+
+- Truffle
+- [DappHub tools](https://dapp.tools/)
+    - Deployment and testing tools: Dapp, Seth, Hevm
+    - *Secure building blocks repo DappSys was called out earlier in the document*
+
+Binary analysis tools
+
+- [Manticore](https://github.com/trailofbits/manticore)
+    - Symbolic emulator
+    - Capable of simulating complex multi-contract and multi-transacion attacks against EVM bytecode
+    - Video: [Automated bugfinding for the blockchain](https://www.youtube.com/watch?v=8nuKOWGGtMc) by Mark Mossburg (Trail of Bits)
+- [Ethersplay](https://github.com/trailofbits/ethersplay)
+    - Graphical EVM disassembler
+    - Capable of method recovery, dynamic jump computation, source code matching, and bytecode diffing
+    - Based on another Trail of Bits tool called Binary Ninja
+    - Video: [Ethersplay demo](https://www.youtube.com/watch?v=Zf8nTGYrlyU) via Trail of Bits
+- [Echidna](https://github.com/trailofbits/echidna)
+    - Property-based tester for EVM bytecode with integrated shrinking
+    - Rapidly find bugs in smart contracts in a minner similar to fuzzing
+- [Rattle](https://github.com/trailofbits/rattle)
+    - Static analysis of EVM binaries
+- IDA Pro with IDA EVM
+    - Video: [IDA EVM demo](https://www.youtube.com/watch?v=oyQiVgao1UM) via Trail of Bits
+
+Linting tools
+
+- Slither
+    - Static analyzer for the Solidity AST
+    - Detect common security issues in reentrancy, constructors, method access, and more
+
+Multi-purpose tools
+
+- Mythril OSS 
+- Mythril Platform
+
+---
+
+Setting up a private Ethereum network
+
+- Geth testnet (on just OS X or Linux ??)
+- parity testing blockchaing
+- CreatePrivatEthereum https://github.com/regispietra/CreatePrivateEthereum
+
+---
+
+https://blog.trailofbits.com/2017/11/06/hands-on-the-ethernaut-ctf
+
+---
+
+Below is from https://www.trailofbits.com/presentations/rattle/
+
+The important and security relevant opcodes are:
+
+- JUMPI, JUMP, RETURN
+    - These instructions define control flow, meaning they’re interesting but not really security relevant!
+- REVERT, INVALID
+    - Exception causing opcodes, these are for aborting contract execution (one returns all remaining gas the other consumes all the remaining gas)
+- CALLVALUE
+    - The amount of ethereum in WEI sent to to the contract in that call
+- CALLDATASIZE, CALLDATALOAD
+    - Arguments passed by the caller. Think argc and argv.
+- SSTORE, SLOAD
+    - Manipulating persistant storage
+- CALL, CALLCODE, DELEGATECALL
+    - Calling into other contracts. CALLCODE is deprecated and seriously broken. DELEGATECALL replaces it, but it’s still a huge code smell.
+- SELFDESTRUCT
+    - Destroys the contract and returns all its value to the address passed as the first argument
+
+If a contract doesn’t have a CALL, CALLCODE, DELEGATECALL, or SELFDESTRUCT in it, there’s no way to get its Ether out.
+
+---
+
 - Smart contracts are made of bytecode stored at particular addresses
 
 - You call the Solidity compiler with `solc`
@@ -33,6 +150,50 @@
         - Costly to read and very expensive to write
 - Contract Application Binary Interface (ABI)
     - Standard way to interact with contracts in the Ethereum ecosystem, both from outside the blockchain and for contract-to-contract interaction
+
+---
+
+
+From https://github.com/trailofbits/publications/blob/master/workshops/Manticore%20-%20EthCC%202018/presentation.pdf -
+
+How to review code
+
+- Manual review: time-consuming, every modification of the contract may lead to introducing a bug
+- Unit tests: only cover a small part of the program's behavior
+- Other techniques:
+    - Static analysis (e.g. Slither)
+    - Fuzzing (e.g. Echidna)
+    - Symbolic execution (e.g. Manticore)
+
+Manticore
+
+- Auditors: Automatically find vulnerabilities
+- Developers: Enhanced unit-tests
+
+---
+
+Benchmarks
+
+https://github.com/ConsenSys/evm-analyzer-benchmark-suite
+
+https://github.com/trailofbits/not-so-smart-contracts
+
+---
+
+Decentralized Application Security Project https://www.dasp.co/
+
+Every vuln explained basically https://github.com/sigp/solidity-security-blog
+
+---
+
+Solidity docs security considerations https://solidity.readthedocs.io/en/latest/security-considerations.html
+
+SWC registry https://smartcontractsecurity.github.io/SWC-registry/
+
+Trail of Bits: Awesome Ethereum Security list https://github.com/trailofbits/awesome-ethereum-security
+
+
+
 
 
 
