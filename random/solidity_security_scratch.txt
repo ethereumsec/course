@@ -115,45 +115,6 @@ If a contract doesn’t have a CALL, CALLCODE, DELEGATECALL, or SELFDESTRUCT in 
 
 ---
 
-- Smart contracts are made of bytecode stored at particular addresses
-
-- You call the Solidity compiler with `solc`
-
-- In the Ethereum world state you have externally owned accounts (EOA) and contract accounts
-    - An EOA is controlled by a private key and cannot contain EVM code
-        - Account state has nonce, balance
-    - A contract account is controlled by EVM code and contains EVM code
-        - Account state has nonce, balance, storage hash, code hash
-
-
-
-- Defines a set of opcodes via Gavin Wood's yellow paper
-    - Arithmetic operations (ADD, SUB, MUL, DIV, ...)
-    - Bitwise operations (AND, OR, XOR, ...)
-    - Context and block information (GASPRICE, GASLIMIT, NUMBER, ...)
-    - Stack, memory & storage operations (PUSH, POP, MSTORE, SSTORE, MLOAD, SLOAD)
-    - Cryptographic function (SHA3)
-    - ...
-- EVM uses "pseudo-registers" - not standard registers like other VMs
-    - No registers means the invocation of all instructions and parameter passing are performed via the EVM stack
-- EVM uses 160-bit addresses
-- EVM outputs logs
-- EVM introduces the concept of Gas
-- Important distinction: Stack, Memory & Storage
-    - Again, all EVM operations are performed on the stack
-        - Accessed via PUSH, POP, COPY, SWAP, etc.
-    - Memory is volatile memory, refreshed and cleared for each message call
-        - Accessed via MSTORE, MLOAD
-        - More costly the larger it grows because it scales quadratically
-    - Storage is a persistent memory area, declared outside of user-defined functions
-        - Accessed via SSTORE, SLOAD
-        - Costly to read and very expensive to write
-- Contract Application Binary Interface (ABI)
-    - Standard way to interact with contracts in the Ethereum ecosystem, both from outside the blockchain and for contract-to-contract interaction
-
----
-
-
 From https://github.com/trailofbits/publications/blob/master/workshops/Manticore%20-%20EthCC%202018/presentation.pdf -
 
 How to review code
@@ -192,10 +153,56 @@ SWC registry https://smartcontractsecurity.github.io/SWC-registry/
 
 Trail of Bits: Awesome Ethereum Security list https://github.com/trailofbits/awesome-ethereum-security
 
+---
+
+Why an "OWASP approach" won't work for Ethereum stuff
+
+> Unlike web applications (OWASP), all the code is public and (generally) unpatchable, and the risk of loss is immediate and total for any given issue. The correct model to consider is every identifiable bug should get marked MUSTFIX, rather than try to segregate issues into high/medium/low/etc to give yourself an excuse to ignore some. ... All these contracts exist in an incredibly hostile environment, where essentially all issues do get exploited and there aren't many secondary controls or possibilities for recovery. I think everyone at Trail of Bits strongly disagrees with copying any sort of approach from OWASP for smart contracts. The problems are just too different to be applicable.
+
+*Credit - Dan Guido ([source](https://discourse.secureth.org/t/owasp-risk-assessment-model/14/2))*
+
+---
+
+> There are no secrets on the blockchain, and all your flaws are on display. If the flaw can be taken advantage of then what we have learned empirically from past evidence on Ethereum is that it will be. You are always in a race against bots, blackhats with automation, and criminals with a direct financial incentive to abuse your contract. I think the patch decision narrows to MUSTFIX vs WONTFIX. In the MUSTFIX case, I think the only modifiers are whether the issue is being actively exploited today or not. I’m somewhat reticent to try and break down these cases into further levels of detail to provide “excuses” for delays.
+
+*Credit - Dan Guido ([source](https://discourse.secureth.org/t/owasp-risk-assessment-model/14/6))*
+
+---
 
 
+- Smart contracts are made of bytecode stored at particular addresses
 
+- You call the Solidity compiler with `solc`
 
+- In the Ethereum world state you have externally owned accounts (EOA) and contract accounts
+    - An EOA is controlled by a private key and cannot contain EVM code
+        - Account state has nonce, balance
+    - A contract account is controlled by EVM code and contains EVM code
+        - Account state has nonce, balance, storage hash, code hash
+
+- Defines a set of opcodes via Gavin Wood's yellow paper
+    - Arithmetic operations (ADD, SUB, MUL, DIV, ...)
+    - Bitwise operations (AND, OR, XOR, ...)
+    - Context and block information (GASPRICE, GASLIMIT, NUMBER, ...)
+    - Stack, memory & storage operations (PUSH, POP, MSTORE, SSTORE, MLOAD, SLOAD)
+    - Cryptographic function (SHA3)
+    - ...
+- EVM uses "pseudo-registers" - not standard registers like other VMs
+    - No registers means the invocation of all instructions and parameter passing are performed via the EVM stack
+- EVM uses 160-bit addresses
+- EVM outputs logs
+- EVM introduces the concept of Gas
+- Important distinction: Stack, Memory & Storage
+    - Again, all EVM operations are performed on the stack
+        - Accessed via PUSH, POP, COPY, SWAP, etc.
+    - Memory is volatile memory, refreshed and cleared for each message call
+        - Accessed via MSTORE, MLOAD
+        - More costly the larger it grows because it scales quadratically
+    - Storage is a persistent memory area, declared outside of user-defined functions
+        - Accessed via SSTORE, SLOAD
+        - Costly to read and very expensive to write
+- Contract Application Binary Interface (ABI)
+    - Standard way to interact with contracts in the Ethereum ecosystem, both from outside the blockchain and for contract-to-contract interaction
 
 Floating points and precision
 
