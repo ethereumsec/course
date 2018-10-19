@@ -170,6 +170,18 @@ Why an "OWASP approach" won't work for Ethereum stuff
 ---
 
 
+https://github.com/MAIAN-tool/MAIAN
+
+https://arvanaghi.com/blog/pentesting-ethereum-dapps/
+https://arvanaghi.com/blog/reversing-ethereum-smart-contracts/
+https://arvanaghi.com/blog/reversing-ethereum-smart-contracts-pt2/
+https://blog.ret2.io/2018/05/16/practical-eth-decompilation/
+https://www.blunderingcode.com/writing-secure-solidity/
+https://www.blunderingcode.com/security-beyond-solidity/
+https://blog.ethereum.org/2016/06/19/thinking-smart-contract-security/
+
+---
+
 - Smart contracts are made of bytecode stored at particular addresses
 
 - You call the Solidity compiler with `solc`
