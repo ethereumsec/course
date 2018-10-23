@@ -1,36 +1,32 @@
-# Block Secured website
+# Ethereum Security Course
 
-The website for Block Secured ([https://blocksecured.com](https://blocksecured.com)).
+This is an open source education around Ethereum security which lives at https://ethsec.io/course.
 
-It pulls in content from the [curriculum repo](https://github.com/blocksecured/curriculum) and [blog repo](https://github.com/blocksecured/blog).
+It is meant to bring "traditional" application security engineers up to speed.
 
-## Introduction
-
-Block Secured is an open-source education in blockchain and smart contract security.
-
-The aim is to provide a comprehensive curriculum for free, targeting existing security professionals who are just new to these concepts.
+This is *not* a course in becoming a security engineer from scratch.
 
 ## History
 
-Block Secured was started by [Randy Gingeleski](https://github.com/gingeleski) as a means to share notes and help others learn faster.
+This course and the wider Ethereum Security Blog site were started by [Randy Gingeleski](https://github.com/gingeleski) as a means to share notes and help others learn.
 
-The effort was heavily inspired by [The Odin Project](https://github.com/theodinproject) which Randy used to learn web development.
+This effort was heavily inspired by [The Odin Project](https://github.com/theodinproject) which Randy used to learn web development.
 
 ## Contributing
 
-Now it's your turn to be part of the story. Block Secured depends on open source contributions to grow, improve, and thrive.
+Now it's your turn to be part of the story. The website depends on open source contributions to grow, improve, and thrive.
 
 ### Repos
 
-Anything specific to the project's web application should be linked to this repo.
+Quick note on the whole website's repo organization.
 
-Blog content - news, shorter-term info, specific how-to's - should be attributed to that repo.
+Blog content should be attributed to that [**parent repo**](https://github.com/ethereumsec/ethereumsec.github.io).
 
-And curriculum/course content should be attributed to that repo.
+Curriculum/course content should be attributed *here*.
 
 ### Issues
 
-This is the easiest way to contribute! Simply open an issue in any of the repos with your suggestion, bug, or idea.
+Easiest way to contribute. Open an issue in any of the repos with a suggestion, bug, or idea.
 
 ### Pull requests
 
