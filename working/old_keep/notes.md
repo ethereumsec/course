@@ -61,3 +61,7 @@ Amber Baldet HITB closing keynote (good intro to blockchain for security people)
 https://www.youtube.com/watch?v=eN5i35Xp1bE
 
 http://blog.ret2.io/2018/05/16/practical-eth-decompilation/
+
+https://blog.gdssecurity.com/labs/2017/9/27/reviewing-ethereum-smart-contracts.html
+
+https://blog.gdssecurity.com/labs/2018/6/1/breaking-randomness-in-the-ethereum-universe-part-1.html
