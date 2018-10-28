@@ -31,12 +31,12 @@ But remember, when you put your contract/pinata out on the Ethereum mainnet, any
 
 ## Required resources
 
-To continue building an understanding of Ethereum, we ask that you read/watch/listen to the following...
+To continue building an understanding of Ethereum, we ask that you read/watch/listen to the following, in the order listed.
 
-1. [*How would I explain Ethereum to a non-technical friend?* (Ethereum StackExchange)](https://ethereum.stackexchange.com/questions/45/how-would-i-explain-ethereum-to-a-non-technical-friend)
-2. [*A Simple Explanation of Ethereum* (TokenFoundry)](https://blog.tokenfoundry.com/a-simple-explanation-of-ethereum/)
-3. [*Just Enough Bitcoin for Ethereum* (Consensys)](https://media.consensys.net/time-sure-does-fly-ed4518792679)
-4. [*Ethereum: Bitcoin Plus Everything* (Consensys)](https://medium.com/@ConsenSys/ethereum-bitcoin-plus-everything-a506dc780106) 
+- [*How would I explain Ethereum to a non-technical friend?* (Ethereum StackExchange)](https://ethereum.stackexchange.com/questions/45/how-would-i-explain-ethereum-to-a-non-technical-friend)
+- [*A Simple Explanation of Ethereum* (TokenFoundry)](https://blog.tokenfoundry.com/a-simple-explanation-of-ethereum/)
+- [*Just Enough Bitcoin for Ethereum* (Consensys)](https://media.consensys.net/time-sure-does-fly-ed4518792679)
+- [*Ethereum: Bitcoin Plus Everything* (Consensys)](https://medium.com/@ConsenSys/ethereum-bitcoin-plus-everything-a506dc780106) 
 
 ## Optional/additional resources
 
