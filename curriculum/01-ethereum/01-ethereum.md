@@ -1,10 +1,43 @@
 
 # Ethereum
 
-(1) https://ethereum.stackexchange.com/questions/45/how-would-i-explain-ethereum-to-a-non-technical-friend
+## Introducing Ethereum
 
-(2) https://blog.tokenfoundry.com/a-simple-explanation-of-ethereum/
+Wait, wait, wait. Before introducing Ethereum it's important to introduce who we think you are. This context sets up the course and whether it's right for you.
 
-(3) https://media.consensys.net/time-sure-does-fly-ed4518792679
+You are a "software security person", sometimes also called application security or product security. You understand risks to web apps and test them. This doesn't have to be penetration testing.
 
-(4) https://medium.com/@ConsenSys/ethereum-bitcoin-plus-everything-a506dc780106
+Okay great. Now on to Ethereum. One way to introduce the system is through metaphors and babyspeak (!!).
+
+## World computer
+
+Ethereum is a lot of different computers around the world working together as a big computer.
+
+People write smart contracts and give them to the big world computer, which become its programs.
+
+The world computer, believe it or not, runs on gas. When your smart contract program executes it burns some gas. As a responsible owner you pay for gas and put it into the world computer to use.
+
+Since the world computer is open to anyone, other people might use some of their gas to try your smart contract program too.
+
+## Pinatas
+
+From a security perspective, each smart contract is like a pinata.
+
+It might be empty or full of candy/Ether/tokens or somewhere in between.
+
+Some pinatas are built better than others.
+
+But remember, when you put your contract/pinata out on the Ethereum mainnet, anyone can take a whack at it!
+
+## Required resources
+
+To continue building an understanding of Ethereum, we ask that you read/watch/listen to the following...
+
+1. [*How would I explain Ethereum to a non-technical friend?* (Ethereum StackExchange)](https://ethereum.stackexchange.com/questions/45/how-would-i-explain-ethereum-to-a-non-technical-friend)
+2. [*A Simple Explanation of Ethereum* (TokenFoundry)](https://blog.tokenfoundry.com/a-simple-explanation-of-ethereum/)
+3. [*Just Enough Bitcoin for Ethereum* (Consensys)](https://media.consensys.net/time-sure-does-fly-ed4518792679)
+4. [*Ethereum: Bitcoin Plus Everything* (Consensys)](https://medium.com/@ConsenSys/ethereum-bitcoin-plus-everything-a506dc780106) 
+
+## Optional/additional resources
+
+- [*Mastering Ethereum* by Andreas M. Antonopoulos and Gavin Wood](https://github.com/ethereumbook/ethereumbook)
