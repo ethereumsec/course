@@ -1,11 +1,9 @@
 
-# Contract audit reporting
-
-This section deals with effectively reporting the output of an audit involving one to several contracts (i.e. 3 related `.sol` files).
-
-Auditing complex applications, and reporting thereof, will be covered later in the course.
-
 # Audit report template
+
+*Since we are on the topic, here is a template you're free to use for audit reports.*
+
+*It's a little opinionated in some ways. You can certainly just use only part of it or none at all...*
 
 The title should describe the contract or contract system this report pertains to followed by some standard service name (i.e. "Contract Security Audit").
 
