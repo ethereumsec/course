@@ -21,7 +21,3 @@ Without further ado - get reading.
 
 - [Level K audits](https://github.com/levelkdev/audits)
 - [Zeppelin audits](https://blog.zeppelin.solutions/tagged/security)
-
-
-
-
