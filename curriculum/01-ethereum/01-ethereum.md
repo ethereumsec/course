@@ -19,15 +19,15 @@ The world computer, believe it or not, runs on gas. When your smart contract pro
 
 Since the world computer is open to anyone, other people might use some of their gas to try your smart contract program too.
 
-## Pinatas
+## Piñatas
 
-From a security perspective, each smart contract is like a pinata.
+From a security perspective, each smart contract is like a piñata.
 
 It might be empty or full of candy/Ether/tokens or somewhere in between.
 
-Some pinatas are built better than others.
+Some piñatas are built better than others.
 
-But remember, when you put your contract/pinata out on the Ethereum mainnet, anyone can take a whack at it!
+But remember, when you put your contract/piñata out on the Ethereum mainnet, anyone can take a whack at it!
 
 ## Required reading
 
