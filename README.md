@@ -1,4 +1,4 @@
-# Ethereum Security Course
+# Open Ethereum Security Course
 
 This is an open source education around Ethereum security which lives at https://ethsec.io/course.
 
