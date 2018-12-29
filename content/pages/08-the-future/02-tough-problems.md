@@ -1,3 +1,16 @@
+Title: Tough Problems
+Date: 2018-12-29
+Modified: 2018-12-29
+Category: the-future
+Tags: the-future
+Slug: the-future/tough-problems
+Authors: Randy Gingeleski
+Summary: Tough Problems
+ParentNumber: 8
+ParentCategory: The Future
+PageNumber: 2
+Template: course_page
+
 
 # Tough problems
 

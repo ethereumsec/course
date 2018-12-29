@@ -1,3 +1,16 @@
+Title: Ethereum
+Date: 2018-12-29
+Modified: 2018-12-29
+Category: ethereum
+Tags: ethereum
+Slug: ethereum/ethereum
+Authors: Randy Gingeleski
+Summary: Ethereum
+ParentNumber: 1
+ParentCategory: Ethereum
+PageNumber: 1
+Template: course_page
+
 
 # Ethereum
 

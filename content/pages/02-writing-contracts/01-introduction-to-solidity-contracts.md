@@ -1,3 +1,16 @@
+Title: Introduction to Solidity Contracts
+Date: 2018-12-29
+Modified: 2018-12-29
+Category: writing-contracts
+Tags: writing-contracts
+Slug: writing-contracts/introduction-to-solidity-contracts
+Authors: Randy Gingeleski
+Summary: Introduction to Solidity Contracts
+ParentNumber: 2
+ParentCategory: Writing Contracts
+PageNumber: 1
+Template: course_page
+
 
 # Introduction to Solidity contracts
 

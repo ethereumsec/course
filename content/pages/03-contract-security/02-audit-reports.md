@@ -1,3 +1,16 @@
+Title: Audit Reports
+Date: 2018-12-29
+Modified: 2018-12-29
+Category: contract-security
+Tags: contract-security
+Slug: contract-security/audit-reports
+Authors: Randy Gingeleski
+Summary: Audit Reports
+ParentNumber: 3
+ParentCategory: Contract Security
+PageNumber: 2
+Template: course_page
+
 
 # Audit reports
 

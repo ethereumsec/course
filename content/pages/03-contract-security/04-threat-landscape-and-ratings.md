@@ -1,3 +1,16 @@
+Title: Threat Landscape and Ratings
+Date: 2018-12-29
+Modified: 2018-12-29
+Category: contract-security
+Tags: contract-security
+Slug: contract-security/threat-landscape-and-ratings
+Authors: Randy Gingeleski
+Summary: Threat Landscape and Ratings
+ParentNumber: 3
+ParentCategory: Contract Security
+PageNumber: 4
+Template: course_page
+
 
 # Threat landscape and ratings
 

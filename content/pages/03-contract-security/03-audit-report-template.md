@@ -1,3 +1,16 @@
+Title: Audit Report Template
+Date: 2018-12-29
+Modified: 2018-12-29
+Category: contract-security
+Tags: contract-security
+Slug: contract-security/audit-report-template
+Authors: Randy Gingeleski
+Summary: Audit Report Template
+ParentNumber: 3
+ParentCategory: Contract Security
+PageNumber: 3
+Template: course_page
+
 
 # Audit report template
 

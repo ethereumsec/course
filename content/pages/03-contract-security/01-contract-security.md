@@ -1,3 +1,16 @@
+Title: Contract Security
+Date: 2018-12-29
+Modified: 2018-12-29
+Category: contract-security
+Tags: contract-security
+Slug: contract-security/contract-security
+Authors: Randy Gingeleski
+Summary: Contract Security
+ParentNumber: 3
+ParentCategory: Contract Security
+PageNumber: 1
+Template: course_page
+
 
 # Contract security
 

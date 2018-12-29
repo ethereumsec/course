@@ -1,3 +1,16 @@
+Title: Progress Through Projects
+Date: 2018-12-29
+Modified: 2018-12-29
+Category: writing-contracts
+Tags: writing-contracts
+Slug: writing-contracts/progress-through-projects
+Authors: Randy Gingeleski
+Summary: Progress Through Projects
+ParentNumber: 2
+ParentCategory: Writing Contracts
+PageNumber: 2
+Template: course_page
+
 
 # Progress through projects
 

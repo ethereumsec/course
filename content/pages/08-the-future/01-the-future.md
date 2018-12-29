@@ -1,3 +1,16 @@
+Title: The Future
+Date: 2018-12-29
+Modified: 2018-12-29
+Category: the-future
+Tags: the-future
+Slug: the-future/the-future
+Authors: Randy Gingeleski
+Summary: The Future
+ParentNumber: 8
+ParentCategory: The Future
+PageNumber: 1
+Template: course_page
+
 
 # The future
 

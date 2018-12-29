@@ -1,3 +1,16 @@
+Title: Starting to Work
+Date: 2018-12-29
+Modified: 2018-12-29
+Category: writing-contracts
+Tags: writing-contracts
+Slug: writing-contracts/starting-to-work
+Authors: Randy Gingeleski
+Summary: Starting to Work
+ParentNumber: 2
+ParentCategory: Writing Contracts
+PageNumber: 3
+Template: course_page
+
 
 # Starting to work
 

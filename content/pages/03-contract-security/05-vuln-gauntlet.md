@@ -1,3 +1,16 @@
+Title: Vuln Gauntlet
+Date: 2018-12-29
+Modified: 2018-12-29
+Category: contract-security
+Tags: contract-security
+Slug: contract-security/vuln-gauntlet
+Authors: Randy Gingeleski
+Summary: Vuln Gauntlet
+ParentNumber: 3
+ParentCategory: Contract Security
+PageNumber: 5
+Template: course_page
+
 
 # Vuln gauntlet
 

@@ -1,3 +1,16 @@
+Title: How Not to Get Rekt
+Date: 2018-12-29
+Modified: 2018-12-29
+Category: contract-security
+Tags: contract-security
+Slug: contract-security/how-not-to-get-rekt
+Authors: Randy Gingeleski
+Summary: How Not to Get Rekt
+ParentNumber: 3
+ParentCategory: Contract Security
+PageNumber: 6
+Template: course_page
+
 
 # How not to get rekt
 
